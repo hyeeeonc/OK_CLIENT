@@ -1,0 +1,85 @@
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+	display: block;
+	will-change: opacity;
+}
+
+
+.sticky-elem {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%
+}
+
+.main-message {
+  top: 45vh;
+  opacity: 0;
+  text-align: center;
+}
+
+.sticky-elem-canvas {
+  top:0px;
+  height: 100%;
+}
+
+#scroll-section-1 canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.thumbnail {
+  top: 30vh;
+  padding-left: 55vw;
+  opacity: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ar {
+  padding-bottom: 100px;
+}
+
+.partnersA {
+  top: 25vh;
+  padding-left: 10vw;
+  opacity: 0;
+}
+
+.partnersB {
+  top: 50vh;
+  padding-left: 10vw;
+  opacity: 0;
+}
+
+#scroll-section-2 {
+  display:flex;
+  justify-content: center;
+}
+
+.google-map {
+  width:50vw;
+}
+
+.map-container {
+  width: 500px;
+  height: 100px;
+  margin: 0 auto
+}
+
+.contact {
+  width:50vw
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 7rem;
+	color: white;
+	background: darkorange;
+}

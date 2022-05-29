@@ -1,0 +1,122 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'S-CoreDream-6Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff');
+}
+
+html {
+  font-family: 'S-CoreDream-6Bold';
+  font-size: 16px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+body {
+  overflow-x: hidden;
+  letter-spacing: -0.05em;
+  background: #181818;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+a:hover {
+  opacity: 70%;
+}
+/* Nav */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.nav {
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  padding: 0 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 1rem;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.nav-links img {
+  display: block; 
+  margin: 0 auto; 
+  width: 322.75px; 
+  height: 44.33px;
+
+}
+
+.sub-selector {
+  position: relative;
+}
+
+
+.main-menu {
+  padding-top: 37.25px;
+  padding-bottom: 37.25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 12.5rem;
+  text-align: center;
+}
+
+.sub-menu {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  vertical-align: middle;
+
+  background-color: rgba(24, 24, 24, 0.5);
+  /* background-color: yellow; */
+
+  width: 100%;
+  top: 100px;
+  transition-duration: 0.2s;
+}
+
+.sub-menu a {
+  text-align: center;
+  display: block;
+  line-height: 70px;
+}
+
+.sub-selector:hover .sub-menu {
+  height:210px;
+}
+
+/* /nav */
