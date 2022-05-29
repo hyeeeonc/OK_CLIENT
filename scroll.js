@@ -65,9 +65,7 @@
   function setCanvasImages() {
     for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
       imgElem = new Image();
-      imgElem.src = `./assets/scr/v1/22.05.25. Okra Seoul Scene 02 - 02_${
-        1035 + i
-      }.JPEG`;
+      imgElem.src = `./assets/image/${1035 + i}.JPEG`;
       sceneInfo[1].objs.videoImages.push(imgElem);
     }
   }
