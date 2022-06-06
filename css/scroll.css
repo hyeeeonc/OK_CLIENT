@@ -2,26 +2,25 @@
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem {
-	display: block;
-	will-change: opacity;
+  display: block;
+  will-change: opacity;
 }
-
 
 .sticky-elem {
   display: none;
   position: fixed;
   left: 0;
-  width: 100%
+  width: 100%;
 }
 
 .main-message {
-  top: 45vh;
+  top: 38vh;
   opacity: 0;
   text-align: center;
 }
 
 .sticky-elem-canvas {
-  top:0px;
+  top: 0px;
   height: 100%;
 }
 
@@ -35,7 +34,7 @@
   top: 30vh;
   padding-left: 55vw;
   opacity: 0;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -57,31 +56,31 @@
 }
 
 #scroll-section-2 {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 .google-map {
-  width:50vw;
+  width: 50vw;
 }
 
 .map-container {
   width: 500px;
   height: 100px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .contact {
-  width:50vw
+  width: 50vw;
 }
 
 footer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin-top: 3rem;
-	height: 7rem;
-	color: white;
-	background: black;
+  height: 7rem;
+  color: white;
+  background: black;
 }

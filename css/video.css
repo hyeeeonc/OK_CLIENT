@@ -5,7 +5,30 @@
 video {
   pointer-events: none;
 }
-video::-webkit-media-controls-panel{ display: none !important; }
-video::-moz-media-controls-panel { display: none !important; }
-video::-o-media-controls-panel { display: none !important; }
-video::-ms-media-controls-panel { display: none !important; }
+video::-webkit-media-controls-panel {
+  display: none !important;
+}
+video::-moz-media-controls-panel {
+  display: none !important;
+}
+video::-o-media-controls-panel {
+  display: none !important;
+}
+video::-ms-media-controls-panel {
+  display: none !important;
+}
+
+footer {
+  font-size: 3.2rem;
+  letter-spacing: -3px;
+}
+
+.logo1 {
+  font-weight: 900;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.logo2 {
+  font-weight: 600;
+  font-style: italic;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" /> -->
+    <style>
+      @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+      .notosanskr * {
+        font-family: "Noto Sans KR", sans-serif;
+      }
+
+      body {
+        font-family: "Noto Sans KR", sans-serif;
+        background-color: black;
+        color: white;
+      }
+      span {
+        font-size: 3.5rem;
+      }
+      .text1 {
+        font-weight: 900;
+        -webkit-text-stroke-width: 4px;
+        -webkit-text-stroke-color: white;
+      }
+
+      .text2 {
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: -3px;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <button onclick="moveToTopSmooth()"></button>
+    <i style="position: relative; z-index: 99; font-size: 48px; color: white" class="fas">&#xf001;</i>
+
+    <img src="./assets/OKRASEOUL.png" alt="OKRA SEOUL" />
+    <img style="color: white" src="./assets/mainLogo_1.svg" alt="OKRA SEOUL" />
+
+    <br />
+    <span class="text1">OKRA</span><span class="text2">SEOUL</span>
+    <div style="height: 500vh"></div>
+    <div id="move"></div>
+
+    <script>
+      var moveToTopSmooth = function () {
+        document.getElementById("move").scrollIntoView({ behavior: "smooth" });
+      };
+    </script>
+  </body>
+</html>

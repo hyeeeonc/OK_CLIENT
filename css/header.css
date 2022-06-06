@@ -40,7 +40,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 10;
 }
 
 .nav {
@@ -90,7 +90,7 @@ header {
 }
 
 .sub-menu-4,
-.sub-menu-3 {
+.sub-menu-2 {
   position: absolute;
   height: 0px;
   overflow: hidden;
@@ -108,7 +108,7 @@ header {
 }
 
 .sub-menu-4 a,
-.sub-menu-3 a {
+.sub-menu-2 a {
   text-align: center;
   display: block;
   line-height: 60px;
@@ -118,8 +118,13 @@ header {
   height: 240px;
 }
 
-.sub-selector:hover .sub-menu-3 {
-  height: 180px;
+.sub-selector:hover .sub-menu-2 {
+  height: 120px;
 }
 
+.input2,
+.input1 {
+  padding-top: 3px;
+  width: 40px;
+}
 /* /nav */
