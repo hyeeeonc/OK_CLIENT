@@ -18,7 +18,7 @@ html::-webkit-scrollbar {
 body {
   overflow-x: hidden;
   letter-spacing: -0.05em;
-  background: #181818;
+  background: rgb(26, 25, 26);
 }
 
 p {
@@ -44,7 +44,7 @@ header {
 }
 
 .nav {
-  background-color: black;
+  background-color: #19181a;
   color: #fff;
   position: absolute;
   top: 0px;

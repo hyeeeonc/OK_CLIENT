@@ -28,7 +28,7 @@
     {
       // 1
       type: "sticky",
-      heightNum: 6, // type normal에서는 필요 없음
+      heightNum: 4, // type normal에서는 필요 없음
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-1"),
@@ -343,15 +343,15 @@ const scrollToContact = () => {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 };
 
-let audio = new Audio("./assets/OkraBG.mp3");
-audio.play();
-audio.autoplay();
+// let audio = new Audio("./assets/OkraBG.mp3");
+// audio.play();
+// audio.autoplay();
 
-audio.addEventListener(
-  "ended",
-  function () {
-    this.currentTime = 0;
-    this.play();
-  },
-  false
-);
+// audio.addEventListener(
+//   "ended",
+//   function () {
+//     this.currentTime = 0;
+//     this.play();
+//   },
+//   false
+// );

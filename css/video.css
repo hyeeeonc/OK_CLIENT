@@ -2,8 +2,15 @@
   overflow: hidden;
 }
 
+.video-container-main {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
 video {
   pointer-events: none;
+  height: calc(100vh - 85px);
 }
 video::-webkit-media-controls-panel {
   display: none !important;
