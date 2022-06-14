@@ -17,6 +17,8 @@
 
     <title>OKRA SEOUL</title>
     <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/audio.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -84,10 +86,9 @@
           <div class="sticky-elem sticky-elem-canvas">
             <canvas id="video-canvas-1" width="1320" height="830"></canvas>
           </div>
+          <!-- carousel-->
           <div class="sticky-elem thumbnail">
-            <img class="ar" src="./assets/leftar.png" />
-            <img src="./assets/thumbnailex.jpg" />
-            <img class="ar" src="./assets/rightar.png" />
+            <div id="thumbnail-section"></div>
           </div>
 
           <div class="sticky-elem partnersA">
@@ -117,7 +118,7 @@
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
-                <span style="width: 477px">535, Dosan-daero, Gangnam-gu, Seoul, Republic of Korea 서울특별시 강남구 도산대로 535 (청담동, 용강빌딩)</span>
+                <span style="width: 477px; font-size: 1rem; color: #b3b3b3">535, Dosan-daero, Gangnam-gu, Seoul, Republic of Korea 서울특별시 강남구 도산대로 535 (청담동, 용강빌딩)</span>
               </div>
               <div id="contactcontainer">
                 <form action="action_page.php">
@@ -133,7 +134,7 @@
 
                   <input type="text" id="Subject" name="Subject" placeholder="Subject" />
 
-                  <textarea id="Contents" name="Contents" placeholder="Contents" style="height: 220px"></textarea>
+                  <textarea id="Contents" name="Contents" placeholder="Contents" style="height: 242px"></textarea>
 
                   <br /><input type="submit" value="Submit" />
                 </form>
@@ -146,6 +147,7 @@
       <footer><span class="logo1">OKRA</span><span class="logo2">SEOUL</span></footer>
     </div>
 
-    <script src="scroll.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/thumbnail.js"></script>
   </body>
 </html>

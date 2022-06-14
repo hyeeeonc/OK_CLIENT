@@ -30,19 +30,6 @@
   left: 50%;
 }
 
-.thumbnail {
-  top: 30vh;
-  padding-left: 55vw;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ar {
-  padding-bottom: 100px;
-}
-
 .partnersA {
   top: 25vh;
   padding-left: 10vw;
@@ -83,4 +70,9 @@ footer {
   height: 7rem;
   color: white;
   background: black;
+}
+
+.prev:hover,
+.next:hover {
+  opacity: 50%;
 }

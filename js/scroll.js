@@ -12,7 +12,7 @@
     {
       // 0
       type: "video",
-      heightNum: 1.5,
+      heightNum: 1,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-0"),
@@ -28,7 +28,7 @@
     {
       // 1
       type: "sticky",
-      heightNum: 4, // type normal에서는 필요 없음
+      heightNum: 5, // type normal에서는 필요 없음
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-1"),
@@ -43,8 +43,8 @@
         videoImageCount: 456,
         imageSequence: [0, 455],
         canvas_opacity: [1, 0, { start: 0.95, end: 1 }],
-        thumbnail_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
-        thumbnail_opacity_out: [1, 0, { start: 0.3, end: 0.35 }],
+        thumbnail_opacity_in: [0, 1, { start: 0.1, end: 0.15 }],
+        thumbnail_opacity_out: [1, 0, { start: 0.32, end: 0.35 }],
         partnersA_opacity_in: [0, 1, { start: 0.55, end: 0.65 }],
         partnersA_opacity_out: [1, 0, { start: 0.82, end: 0.92 }],
         partnersB_opacity_in: [0, 1, { start: 0.6, end: 0.7 }],
@@ -74,6 +74,7 @@
   setCanvasImages();
 
   function setLayout() {
+    console.log("재조정");
     // 각 스크롤 섹션의 높이 세팅
     for (let i = 0; i < sceneInfo.length; i++) {
       if (sceneInfo[i].type === "sticky" || sceneInfo[i].type === "video") {
@@ -273,6 +274,7 @@
   }
 
   window.addEventListener("load", () => {
+    console.log("로드조정");
     setLayout(); // 중간에 새로고침 시, 콘텐츠 양에 따라 높이 계산에 오차가 발생하는 경우를 방지하기 위해 before-load 클래스 제거 전에도 확실하게 높이를 세팅하도록 한번 더 실행
     document.body.classList.remove("before-load");
     setLayout();
@@ -303,11 +305,11 @@
       }
     });
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 900) {
-        window.location.reload();
-      }
-    });
+    // window.addEventListener("resize", () => {
+    //   if (window.innerWidth > 900) {
+    //     window.location.reload();
+    //   }
+    // });
 
     window.addEventListener("orientationchange", () => {
       scrollTo(0, 0);
@@ -323,8 +325,6 @@
     //   });
   });
   window.addEventListener("resize", setLayout);
-  console.log(window.innerHeight);
-  console.log(sceneInfo[1].heightNum);
 
   const scrollTo = () => {
     const heightSetting = sceneInfo[1].heightNum * window.innerHeight;
@@ -342,16 +342,3 @@
 const scrollToContact = () => {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 };
-
-// let audio = new Audio("./assets/OkraBG.mp3");
-// audio.play();
-// audio.autoplay();
-
-// audio.addEventListener(
-//   "ended",
-//   function () {
-//     this.currentTime = 0;
-//     this.play();
-//   },
-//   false
-// );
