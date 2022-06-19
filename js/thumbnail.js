@@ -3,9 +3,20 @@ const domain = "api.okraseoul.com";
 const thumbnailSection = document.getElementById("thumbnail-section");
 
 window.onload = async () => {
+  const urlSearch = new URLSearchParams(location.search);
+  const section = urlSearch.get("section");
+
+  if (section) {
+    scrollToContact();
+  }
+
   const res = await fetch(`https://${domain}/api/v1/thumbnails`);
-  const thumbnails = await res.json();
+  let thumbnails = await res.json();
   thumbnailSection.innerHTML += `<div class="ar"><input class="prev" type="image" src="./assets/leftar.png" /></div>`;
+  thumbnails = [].concat(
+    thumbnails[thumbnails.length - 1],
+    thumbnails.slice(0, thumbnails.length - 1)
+  );
 
   const thumbnailWindow = document.createElement("div");
   thumbnailWindow.id = "window";
@@ -44,6 +55,15 @@ window.onload = async () => {
 
   function reorganizeEl(selectedBtn) {
     container.removeAttribute("style");
-    selectedBtn === "prev" ? container.insertBefore(container.lastElementChild, container.firstElementChild) : container.appendChild(container.firstElementChild);
+    selectedBtn === "prev"
+      ? container.insertBefore(
+          container.lastElementChild,
+          container.firstElementChild
+        )
+      : container.appendChild(container.firstElementChild);
   }
+
+  // Board
+  const resp = await fetch(`https://${domain}/api/v1/posts_enabled?size=16`);
+  let postList = await resp.json();
 };

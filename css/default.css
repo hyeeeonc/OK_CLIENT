@@ -1,15 +1,20 @@
 @charset 'utf-8';
+@font-face {
+	font-family: 'locus_sangsang';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+/* @font-face {
+	font-family: 'S-CoreDream-6Bold';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff'); */
 
 html {
-	@font-face {
-		font-family: 'S-CoreDream-6Bold';
-		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff');
-	}
-	
-	
+	font-family: 'locus_sangsang';
 	line-height: 1.2;
 	word-wrap: break-word;
 }
+
 body {
 	-webkit-font-smoothing: antialiased;
 }

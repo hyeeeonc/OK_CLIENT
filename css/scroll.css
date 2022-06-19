@@ -30,15 +30,25 @@
   left: 50%;
 }
 
+.partnersA .a {
+  width: 100%;
+}
+
 .partnersA {
-  top: 25vh;
-  padding-left: 10vw;
+  top: 38vh;
+  width: 25rem;
+  left: calc(50vw - 660px + 20rem);
+  transform: translate(-50%, -50%);
+
   opacity: 0;
 }
 
 .partnersB {
-  top: 50vh;
-  padding-left: 10vw;
+  top: 68vh;
+  width: 12rem;
+  left: calc(50vw - 660px + 20rem);
+  transform: translate(-50%, -50%);
+
   opacity: 0;
 }
 

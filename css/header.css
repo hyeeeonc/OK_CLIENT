@@ -1,11 +1,13 @@
 @charset "utf-8";
 @font-face {
-  font-family: "S-CoreDream-6Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff");
+  font-family: 'locus_sangsang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
-  font-family: "S-CoreDream-6Bold";
+  font-family: 'locus_sangsang';
   font-size: 16px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -17,8 +19,7 @@ html::-webkit-scrollbar {
 
 body {
   overflow-x: hidden;
-  letter-spacing: -0.05em;
-  background: rgb(26, 25, 26);
+  background: #181818;
 }
 
 p {
@@ -40,11 +41,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 99;
 }
 
 .nav {
-  background-color: rgb(26, 25, 26);
+  background-color: #181818;
   color: #fff;
   position: absolute;
   top: 0px;
@@ -122,9 +123,15 @@ header {
   height: 120px;
 }
 
+.music-set{
+  position: fixed;
+  left: calc(50vw - 660px + 3rem);
+  margin-top: 90vh;
+  z-index: 100;
+}
 .input2,
 .input1 {
-  padding-top: 3px;
-  width: 40px;
+  height: 2.6rem;
+  margin-right: 1rem;
 }
 /* /nav */

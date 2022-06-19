@@ -1,8 +1,7 @@
 #contact1 {
   /* position: relative; */
   margin: 3rem auto;
-  background-color: rgb(26, 25, 26);
-  border-radius: 10px;
+  background-color: #181818;
   height: 80vh;
   width: 1380px;
   display: flex;
@@ -55,14 +54,14 @@
 
 input[type="text"],
 textarea {
-  width: 524px;
-  height: 56px;
+  width: 420px;
+  height: 44px;
   padding-left: 12px;
   border: 4px solid #e6e6e6;
   box-sizing: border-box;
   background-color: #181818;
   color: #e6e6e6;
-  font-size: 24px;
+  font-size: 1.2rem;
   margin-bottom: 16px;
   font-family: locus_sangsang;
 }
