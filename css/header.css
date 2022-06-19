@@ -1,13 +1,13 @@
 @charset "utf-8";
 @font-face {
-  font-family: 'locus_sangsang';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+  font-family: "locus_sangsang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 html {
-  font-family: 'locus_sangsang';
+  font-family: "locus_sangsang";
   font-size: 16px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -123,10 +123,10 @@ header {
   height: 120px;
 }
 
-.music-set{
+.music-set {
   position: fixed;
   left: calc(50vw - 660px + 3rem);
-  margin-top: 90vh;
+  bottom: 41.5px;
   z-index: 100;
 }
 .input2,

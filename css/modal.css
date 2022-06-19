@@ -16,11 +16,11 @@
   position: absolute;
   width: 14rem;
   height: 7rem;
-  top: 60vh;
+  top: 55vh;
   left: 38vw;
   transform: translate(-50%, -50%);
   background-color: rgba(242, 242, 242, 0.8);
-  border: 1px solid #181818
+  border: 1px solid #181818;
 }
 
 .modal-china {
@@ -32,7 +32,7 @@
   left: 56vw;
   transform: translate(-50%, -50%);
   background-color: rgba(242, 242, 242, 0.8);
-  border: 1px solid #181818
+  border: 1px solid #181818;
 }
 
 .modal-uk {
@@ -40,11 +40,11 @@
   position: absolute;
   width: 20rem;
   height: 7rem;
-  top: 50vh;
+  top: 45vh;
   left: 38vw;
   transform: translate(-50%, -50%);
   background-color: rgba(242, 242, 242, 0.8);
-  border: 1px solid #181818
+  border: 1px solid #181818;
 }
 
 .modal-vietnam {
@@ -56,7 +56,7 @@
   left: 56vw;
   transform: translate(-50%, -50%);
   background-color: rgba(242, 242, 242, 0.8);
-  border: 1px solid #181818
+  border: 1px solid #181818;
 }
 
 .modal-thailand {
@@ -68,7 +68,7 @@
   left: 55vw;
   transform: translate(-50%, -50%);
   background-color: rgba(242, 242, 242, 0.8);
-  border: 1px solid #181818
+  border: 1px solid #181818;
 }
 
 .modal-title {

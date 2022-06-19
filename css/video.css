@@ -25,7 +25,15 @@ video::-ms-media-controls-panel {
   display: none !important;
 }
 
+main {
+  overflow: hidden;
+}
+
 footer {
+  position: inherit;
+  background-color: black;
+  z-index: 10;
+  margin-top: 1rem;
   font-size: 3.2rem;
   letter-spacing: -3px;
 }

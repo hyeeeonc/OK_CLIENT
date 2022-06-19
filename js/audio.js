@@ -10,3 +10,8 @@ audio.addEventListener(
   },
   false
 );
+
+window.onbeforeunload = function () {
+  const time = audio.currentTime;
+  console.log(time);
+};

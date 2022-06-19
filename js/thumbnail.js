@@ -2,6 +2,10 @@ const domain = "api.okraseoul.com";
 
 const thumbnailSection = document.getElementById("thumbnail-section");
 
+const routeToPost = (postId) => {
+  location.href = `https://board.okraseoul.com/${postId}`;
+};
+
 window.onload = async () => {
   const urlSearch = new URLSearchParams(location.search);
   const section = urlSearch.get("section");
@@ -13,10 +17,7 @@ window.onload = async () => {
   const res = await fetch(`https://${domain}/api/v1/thumbnails`);
   let thumbnails = await res.json();
   thumbnailSection.innerHTML += `<div class="ar"><input class="prev" type="image" src="./assets/leftar.png" /></div>`;
-  thumbnails = [].concat(
-    thumbnails[thumbnails.length - 1],
-    thumbnails.slice(0, thumbnails.length - 1)
-  );
+  thumbnails = [].concat(thumbnails[thumbnails.length - 1], thumbnails.slice(0, thumbnails.length - 1));
 
   const thumbnailWindow = document.createElement("div");
   thumbnailWindow.id = "window";
@@ -25,7 +26,7 @@ window.onload = async () => {
   thumbnailContainer.className = "thumbnail-container";
 
   thumbnails.forEach((t) => {
-    thumbnailContainer.innerHTML += `<div class="thumbnail-cell"> 
+    thumbnailContainer.innerHTML += `<div class="thumbnail-cell" onclick="routeToPost(${t.postId})" style="cursor:pointer;"> 
       ${t.thumbnail}
       </div>`;
   });
@@ -55,12 +56,7 @@ window.onload = async () => {
 
   function reorganizeEl(selectedBtn) {
     container.removeAttribute("style");
-    selectedBtn === "prev"
-      ? container.insertBefore(
-          container.lastElementChild,
-          container.firstElementChild
-        )
-      : container.appendChild(container.firstElementChild);
+    selectedBtn === "prev" ? container.insertBefore(container.lastElementChild, container.firstElementChild) : container.appendChild(container.firstElementChild);
   }
 
   // Board
