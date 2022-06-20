@@ -71,17 +71,6 @@
   width: 50vw;
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 3rem;
-  height: 7rem;
-  color: white;
-  background: black;
-}
-
 .prev:hover,
 .next:hover {
   opacity: 50%;

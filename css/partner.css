@@ -1,16 +1,12 @@
-
 .van1 {
-    top: 25%;
-   
+  top: 25%;
 }
-.van2{
-    top: 55%;
-    
+.van2 {
+  top: 55%;
 }
- 
+
 .object {
-    position: absolute;
-    
+  position: absolute;
 }
 /*
 .mcctext{
@@ -33,17 +29,21 @@
     -o-transform: translate(500px,0);
     -moz-transform: translate(500px,0);
 } */
-.mc{
-    display: flex;
-    flex-wrap: wrap;
-    align-content:space-between;
-    align-items: center;
+.mc {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: center;
 }
 
-.textcontrol
-{
-    color:white;
-    font-size: 24px;
-    font-family: locus_sangsang;
+.textcontrol {
+  font-weight: 200;
+  color: white;
+  font-size: 24px;
+  font-family: locus_sangsang;
+}
 
+.textcontrol h1 {
+  font-weight: bold;
+  margin-bottom: 1rem;
 }

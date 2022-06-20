@@ -29,15 +29,6 @@ main {
   overflow: hidden;
 }
 
-footer {
-  position: inherit;
-  background-color: black;
-  z-index: 10;
-  margin-top: 1rem;
-  font-size: 3.2rem;
-  letter-spacing: -3px;
-}
-
 .logo1 {
   font-weight: 900;
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;

@@ -80,12 +80,9 @@
       if (sceneInfo[i].type === "sticky" || sceneInfo[i].type === "video") {
         sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
       } else if (sceneInfo[i].type === "normal") {
-        sceneInfo[i].scrollHeight =
-          sceneInfo[i].objs.content.offsetHeight + window.innerHeight * 1;
+        sceneInfo[i].scrollHeight = sceneInfo[i].objs.content.offsetHeight + window.innerHeight * 1;
       }
-      sceneInfo[
-        i
-      ].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
+      sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
     }
 
     yOffset = window.pageYOffset;
@@ -116,14 +113,8 @@
       const partScrollEnd = values[2].end * scrollHeight;
       const partScrollHeight = partScrollEnd - partScrollStart;
 
-      if (
-        currentYOffset >= partScrollStart &&
-        currentYOffset <= partScrollEnd
-      ) {
-        rv =
-          ((currentYOffset - partScrollStart) / partScrollHeight) *
-            (values[1] - values[0]) +
-          values[0];
+      if (currentYOffset >= partScrollStart && currentYOffset <= partScrollEnd) {
+        rv = ((currentYOffset - partScrollStart) / partScrollHeight) * (values[1] - values[0]) + values[0];
       } else if (currentYOffset < partScrollStart) {
         rv = values[0];
       } else if (currentYOffset > partScrollEnd) {
@@ -149,70 +140,41 @@
 
         if (scrollRatio <= 0.7) {
           // in
-          objs.message.style.opacity = calcValues(
-            values.message_opacity_in,
-            currentYOffset
-          );
+          objs.message.style.opacity = calcValues(values.message_opacity_in, currentYOffset);
         } else {
           // out
-          objs.message.style.opacity = calcValues(
-            values.message_opacity_out,
-            currentYOffset
-          );
+          objs.message.style.opacity = calcValues(values.message_opacity_out, currentYOffset);
         }
 
         break;
 
       case 1:
-        let sequence = Math.round(
-          calcValues(values.imageSequence, currentYOffset)
-        );
+        let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
         objs.context.drawImage(objs.videoImages[sequence], 0, 0);
-        objs.canvas.style.opacity = calcValues(
-          values.canvas_opacity,
-          currentYOffset
-        );
+        objs.canvas.style.opacity = calcValues(values.canvas_opacity, currentYOffset);
 
         if (scrollRatio <= 0.27) {
           // in
-          objs.thumbnail.style.opacity = calcValues(
-            values.thumbnail_opacity_in,
-            currentYOffset
-          );
+          objs.thumbnail.style.opacity = calcValues(values.thumbnail_opacity_in, currentYOffset);
         } else {
           // out
-          objs.thumbnail.style.opacity = calcValues(
-            values.thumbnail_opacity_out,
-            currentYOffset
-          );
+          objs.thumbnail.style.opacity = calcValues(values.thumbnail_opacity_out, currentYOffset);
         }
 
         if (scrollRatio <= 0.75) {
           // in
-          objs.partnersA.style.opacity = calcValues(
-            values.partnersA_opacity_in,
-            currentYOffset
-          );
+          objs.partnersA.style.opacity = calcValues(values.partnersA_opacity_in, currentYOffset);
         } else {
           // out
-          objs.partnersA.style.opacity = calcValues(
-            values.partnersA_opacity_out,
-            currentYOffset
-          );
+          objs.partnersA.style.opacity = calcValues(values.partnersA_opacity_out, currentYOffset);
         }
 
         if (scrollRatio <= 0.75) {
           // in
-          objs.partnersB.style.opacity = calcValues(
-            values.partnersB_opacity_in,
-            currentYOffset
-          );
+          objs.partnersB.style.opacity = calcValues(values.partnersB_opacity_in, currentYOffset);
         } else {
           // out
-          objs.partnersB.style.opacity = calcValues(
-            values.partnersB_opacity_out,
-            currentYOffset
-          );
+          objs.partnersB.style.opacity = calcValues(values.partnersB_opacity_out, currentYOffset);
         }
 
         break;
@@ -283,9 +245,7 @@
         const currentYOffset = delayedYOffset - prevScrollHeight;
         const objs = sceneInfo[currentScene].objs;
         const values = sceneInfo[currentScene].values;
-        let sequence = Math.round(
-          calcValues(values.imageSequence, currentYOffset)
-        );
+        let sequence = Math.round(calcValues(values.imageSequence, currentYOffset));
         if (objs.videoImages[sequence]) {
           objs.context.drawImage(objs.videoImages[sequence], 0, 0);
         }
@@ -297,11 +257,7 @@
     if (delayedYOffset < 1) {
       scrollLoop();
       sceneInfo[0].objs.canvas.style.opacity = 1;
-      sceneInfo[0].objs.context.drawImage(
-        sceneInfo[0].objs.videoImages[0],
-        0,
-        0
-      );
+      sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
     }
     // 페이지 맨 아래로 갈 경우: 마지막 섹션은 스크롤 계산으로 위치 및 크기를 결정해야할 요소들이 많아서 1픽셀을 움직여주는 것으로 해결
     if (document.body.offsetHeight - window.innerHeight - delayedYOffset < 1) {

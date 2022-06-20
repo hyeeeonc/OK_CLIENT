@@ -2,48 +2,11 @@
   /* position: relative; */
   margin: 3rem auto;
   background-color: #181818;
-  height: 80vh;
-  width: 1380px;
+  height: 900px;
   display: flex;
   /* align-items: center; */
   justify-content: center;
   z-index: 9;
-}
-
-@media (max-width: 1380px) {
-  #contact {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1320px) {
-  #contact {
-    width: 1080px;
-  }
-}
-
-@media (max-width: 1080px) {
-  #contact {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1024px) {
-  #contact {
-    width: 820px;
-  }
-}
-
-@media (max-width: 820px) {
-  #contact {
-    width: 100%;
-  }
-}
-
-@media (max-width: 786px) {
-  #contact {
-    width: 100%;
-  }
 }
 
 #contactcontainer {
