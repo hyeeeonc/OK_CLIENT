@@ -12,17 +12,14 @@
     {
       // 0
       type: "video",
-      heightNum: 1.3,
+      heightNum: 1,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-0"),
         video: document.querySelector("#scroll-section-0 .video"),
-        message: document.querySelector("#scroll-section-0 .main-message"),
       },
       values: {
         video_opacity: [1, 0, { start: 0.25, end: 0.7 }],
-        message_opacity_in: [0, 1, { start: 0.45, end: 0.55 }],
-        message_opacity_out: [1, 0, { start: 0.8, end: 0.95 }],
       },
     },
     {
@@ -137,14 +134,6 @@
       case 0:
         const video_opacity = calcValues(values.video_opacity, currentYOffset);
         objs.video.style.opacity = video_opacity;
-
-        if (scrollRatio <= 0.7) {
-          // in
-          objs.message.style.opacity = calcValues(values.message_opacity_in, currentYOffset);
-        } else {
-          // out
-          objs.message.style.opacity = calcValues(values.message_opacity_out, currentYOffset);
-        }
 
         break;
 
