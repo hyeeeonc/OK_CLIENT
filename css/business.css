@@ -1,3 +1,13 @@
+svg {
+  width: 1320px;
+}
+
+@media (max-width: 1320px) {
+  svg {
+    width: 1024px;
+  }
+}
+
 .modal-korea {
   display: none;
   position: absolute;

@@ -12,7 +12,7 @@
     {
       // 0
       type: "video",
-      heightNum: 1,
+      heightNum: 1.3,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-0"),

@@ -15,3 +15,7 @@ window.onbeforeunload = function () {
   const time = audio.currentTime;
   console.log(time);
 };
+
+audio.addEventListener("pause", () => {
+  console.log(audio.currentTime);
+});

@@ -75,3 +75,17 @@
 .next:hover {
   opacity: 50%;
 }
+
+@media (max-width: 1320px) {
+  .partnersA,
+  .partnersB {
+    left: calc(50vw - 512px + 20rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .partnersA,
+  .partnersB {
+    left: calc(50vw);
+  }
+}

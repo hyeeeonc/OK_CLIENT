@@ -23,6 +23,7 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
+
 .sns img:nth-child(1) {
   width: 36.75px;
 }

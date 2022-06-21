@@ -52,7 +52,7 @@ header {
   left: 0px;
   width: 100%;
   height: 85px;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .nav-links {
@@ -82,8 +82,7 @@ header {
 }
 
 .main-menu {
-  padding-top: 28.25px;
-  padding-bottom: 28.25px;
+  padding: 28.25px 0px;
   font-size: 1.5rem;
   font-weight: bold;
   width: 12.5rem;
@@ -129,9 +128,259 @@ header {
   bottom: 41.5px;
   z-index: 100;
 }
-.input2,
-.input1 {
+.play,
+.pause {
   height: 2.6rem;
   margin-right: 1rem;
 }
 /* /nav */
+
+.header-spacer {
+  height: 85px;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  margin-right: 1rem;
+  height: 100%;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-width: 0;
+  transition: 0.5s ease;
+  z-index: 1;
+  background: #4d4d4d 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.hamburger-button {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.hamburger-play,
+.hamburger-pause {
+  height: 21px;
+  margin-left: 0.7rem;
+}
+
+.hamburger-play {
+  margin-left: 1.2rem;
+}
+
+.hamburger-pause {
+  margin-right: 3rem;
+}
+.hamburger-sns {
+  width: 110px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hamburger-sns img:nth-child(1) {
+  width: 36px;
+  height: 25.8px;
+}
+
+.hamburger-sns img:nth-child(2) {
+  width: 33px;
+  height: 33px;
+}
+
+.hamburger-sns img:nth-child(3) {
+  width: 27px;
+  height: 30px;
+}
+
+.hamburger-nav > li {
+  margin-top: 1.3rem;
+  margin-left: 0.9rem;
+}
+
+.hamburger-nav > li:nth-child(2) {
+  margin-top: 1.9rem;
+}
+
+.hamburger-main-menu li:nth-child(1) {
+  margin-top: 2rem;
+}
+
+.hamburger-main-menu li {
+  margin-bottom: 1.1rem;
+  margin-left: 1.2rem;
+}
+
+.burger-icon {
+  cursor: pointer;
+  /* display: inline-block; */
+  /* position: absolute; */
+  z-index: 2;
+  /* padding: 8px 0; */
+  height: auto;
+  user-select: none;
+  width: auto;
+  margin: 0;
+}
+
+.burger-icon .burger-sticks {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 24px;
+  border-radius: 2px;
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+  background: white;
+  content: "";
+  /* display: block; */
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.burger-icon .burger-sticks:before {
+  top: 9px;
+}
+
+.burger-icon .burger-sticks:after {
+  top: -9px;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked ~ .menu {
+  max-width: 235px;
+}
+
+.burger-check:checked ~ .burger-icon .burger-sticks {
+  background: transparent;
+}
+
+.burger-check:checked ~ .burger-icon .burger-sticks:before {
+  transform: rotate(-45deg);
+}
+
+.burger-check:checked ~ .burger-icon .burger-sticks:after {
+  transform: rotate(45deg);
+}
+
+.burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:after {
+  top: 0;
+}
+
+/* /hamburger */
+
+@media (max-width: 1320px) {
+  .music-set {
+    left: 3rem;
+  }
+
+  .play,
+  .pause {
+    height: 2rem;
+  }
+
+  .nav-links {
+    max-width: 1024px;
+  }
+
+  .main-menu,
+  .sub-menu-2,
+  .sub-menu-4 {
+    font-size: 1.2rem;
+  }
+
+  .main-menu {
+    width: 11rem;
+    padding: 32.25px 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .music-set {
+    left: 3rem;
+  }
+
+  .play,
+  .pause {
+    height: 1.8rem;
+  }
+
+  .nav-links {
+    max-width: 768px;
+  }
+
+  .nav,
+  .header-spacer {
+    height: 70px;
+  }
+  .sub-menu-2,
+  .sub-menu-4 {
+    top: 70px;
+  }
+
+  .main-menu,
+  .sub-menu-2,
+  .sub-menu-4 {
+    font-size: 1rem;
+  }
+  /* <a href="./index.html?section=contact">Contact Us</a> */
+
+  .main-menu {
+    width: 10rem;
+    padding: 32.25px 0px;
+  }
+
+  .logo img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .music-set {
+    display: none;
+  }
+
+  .nav-links {
+    max-width: 768px;
+  }
+
+  .nav,
+  .header-spacer {
+    height: 50px;
+  }
+
+  .sub-selector {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
+    margin-left: 0.5rem;
+  }
+}

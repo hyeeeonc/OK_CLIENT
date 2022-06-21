@@ -40,3 +40,15 @@
 .thumbnail-cell p {
   height: 400px;
 }
+
+@media (max-width: 1320px) {
+  .thumbnail {
+    margin-left: calc(50vw + 512px - 40rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .thumbnail {
+    margin-left: calc(50vw + 384px - 42.5rem);
+  }
+}

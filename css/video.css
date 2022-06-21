@@ -38,3 +38,15 @@ main {
   font-weight: 600;
   font-style: italic;
 }
+
+@media (max-width: 1320px) {
+  video {
+    height: calc(95vh - 85px);
+  }
+}
+
+@media (max-width: 1024px) {
+  video {
+    height: calc(85vh - 85px);
+  }
+}
