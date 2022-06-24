@@ -89,3 +89,38 @@
     left: calc(50vw);
   }
 }
+
+@media (max-width: 767px) {
+  .partner-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.1rem;
+  }
+
+  .md-mobile {
+    max-width: 140px;
+  }
+
+  .mc-mobile {
+    max-width: 100px;
+  }
+
+  .contact-mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-mobile-container {
+    width: 127px;
+    height: 43px;
+    border-radius: 12px;
+    background-color: #808080;
+    text-align: center;
+    line-height: 43px;
+    font-family: "MICEGothicOTFBold";
+    font-size: 17px;
+    font-weight: 900;
+  }
+}
