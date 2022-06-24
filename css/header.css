@@ -153,15 +153,15 @@ header {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
   max-width: 0;
   transition: 0.5s ease;
   z-index: 1;
   background: #4d4d4d 0% 0% no-repeat padding-box;
+  background-color: #4d4d4d;
   opacity: 1;
 }
 
@@ -169,7 +169,7 @@ header {
   position: absolute;
   top: calc(100vh - 1rem);
   top: calc((var(--vh, 1vh) * 100) - 1rem);
-  padding-bottom: env(safe-area-inset-bottom);
+  /* padding-bottom: env(safe-area-inset-bottom); */
   display: flex;
   align-items: center;
   flex-wrap: nowrap;

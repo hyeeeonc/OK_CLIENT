@@ -81,13 +81,23 @@
             </div>
 
             <!-- Hamburger -->
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
+              <div id="hamburger-click"></div>
               <input class="burger-check" type="checkbox" id="burger-check" />
               <label class="burger-icon" for="burger-check">
                 <span class="burger-sticks"></span>
               </label>
               <div class="menu">
                 <div style="width: 545px">
+                  <div class="hamburger-button">
+                    <input class="hamburger-play" type="image" src="./assets/play.png" onclick="audio.play();" value="play" />
+                    <input class="hamburger-pause" type="image" src="./assets/stop.png" onclick="audio.pause();" value="pause" />
+                    <div class="hamburger-sns">
+                      <img src="./assets/youtube.png" alt="youtube" />
+                      <img src="./assets/fb.png" alt="Facebook" />
+                      <img src="./assets/insta.png" alt="Instagram" />
+                    </div>
+                  </div>
                   <ul class="hamburger-nav">
                     <li>
                       We Are OKRA
@@ -107,23 +117,15 @@
                       </ul>
                     </li>
                   </ul>
-                  <div class="hamburger-button">
-                    <div class="hamburger-play" style="width: 38px"></div>
-                    <div class="hamburger-pause"></div>
-                    <div class="hamburger-sns">
-                      <img src="./assets/youtube.png" alt="youtube" />
-                      <img src="./assets/fb.png" alt="Facebook" />
-                      <img src="./assets/insta.png" alt="Instagram" />
-                    </div>
-                  </div>
                 </div>
+              </div>
             </div>
             <!-- /Hamburger -->
           </div>
         </nav>
       </header>
       <!-- /Header -->
-          <div class="header-spacer"></div>
+      <div class="header-spacer"></div>
 
       <main class="pc">
         <section>
@@ -1148,12 +1150,15 @@
         </div>
         <div class="footer-content">(주)오크라서울 / 156-81-52372 노영신</div>
         <div class="footer-content-p">서울특별시 송파구 충민로 66, 8층 엘-8149호(문정동, 가든파이브라이프) / info@okraseoul.com</div>
-        <div class="footer-content-m">서울특별시 송파구 충민로 66, 8층 엘-8149호(문정동, 가든파이브라이프) <br /> info@okraseoul.com</div>
+        <div class="footer-content-m">
+          서울특별시 송파구 충민로 66, 8층 엘-8149호(문정동, 가든파이브라이프) <br />
+          info@okraseoul.com
+        </div>
 
         <div class="copyright">copyright 2022. OKRASEOUL all right reserve</div>
       </footer>
     </div>
-    <script src="./js/scroll.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/header.js"></script>
   </body>
 </html>
