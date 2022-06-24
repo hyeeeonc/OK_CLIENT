@@ -10,7 +10,7 @@
 }
 
 #contactcontainer {
-  width: 477px;
+  width: 420px;
   height: 570px;
 }
 
@@ -25,7 +25,7 @@ textarea {
   color: #e6e6e6;
   font-size: 1.1rem;
   margin-bottom: 13px;
-  font-family: locus_sangsang;
+  font-family: MICEGothic;
 }
 
 select {
@@ -38,7 +38,7 @@ select {
   color: #e6e6e6;
   font-size: 1.1rem;
   margin-bottom: 16px;
-  font-family: locus_sangsang;
+  font-family: MICEGothic;
 }
 
 input[type="submit"] {
@@ -50,7 +50,7 @@ input[type="submit"] {
   opacity: 1;
   border: none;
   font-size: 1.1rem;
-  font-family: locus_sangsang;
+  font-family: MICEGothic;
   cursor: pointer;
 }
 

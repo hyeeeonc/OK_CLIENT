@@ -1,6 +1,7 @@
 const domain = "api.okraseoul.com";
 
 const thumbnailSection = document.getElementById("thumbnail-section");
+const thumbnailSectionMobile = document.getElementById("thumbnail-section-mobile");
 
 const routeToPost = (postId) => {
   location.href = `https://board.okraseoul.com/${postId}`;
@@ -17,6 +18,8 @@ window.onload = async () => {
   const res = await fetch(`https://${domain}/api/v1/thumbnails`);
   let thumbnails = await res.json();
   thumbnailSection.innerHTML += `<div class="ar"><input class="prev" type="image" src="./assets/leftar.png" /></div>`;
+  thumbnailSectionMobile.innerHTML += `<div class="ar"><input class="prev" type="image" src="./assets/leftar.png" /></div>`;
+
   thumbnails = [].concat(thumbnails[thumbnails.length - 1], thumbnails.slice(0, thumbnails.length - 1));
 
   const thumbnailWindow = document.createElement("div");
@@ -30,12 +33,17 @@ window.onload = async () => {
       ${t.thumbnail}
       </div>`;
   });
-  // <a href="board.okraseoul.com/${t.postId}>       </a>
 
   thumbnailWindow.appendChild(thumbnailContainer);
-  thumbnailSection.appendChild(thumbnailWindow);
+  const deviceCheck = document.querySelector(".pc");
+  if (deviceCheck) {
+    thumbnailSection.appendChild(thumbnailWindow);
+  } else {
+    thumbnailSectionMobile.appendChild(thumbnailWindow);
+  }
 
   thumbnailSection.innerHTML += `<div class="ar"><input class="next" type="image" src="./assets/rightar.png" /></div>`;
+  thumbnailSectionMobile.innerHTML += `<div class="ar"><input class="next" type="image" src="./assets/rightar.png" /></div>`;
 
   const container = document.querySelector(".thumbnail-container");
   const prevBtn = document.querySelector(".prev");

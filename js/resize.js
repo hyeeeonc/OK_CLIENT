@@ -1,16 +1,20 @@
-const main = document.querySelector(".pc");
+const pc = document.querySelector(".pc");
+const mobile = document.querySelector(".mobile");
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("hi");
-  if (window.innerWidth < 700) {
-    setTimeout(() => main.remove(), 3000);
+  if (window.innerWidth < 768) {
+    pc.remove();
+  } else {
+    mobile.remove();
   }
 });
 
 let beforeWidth = window.innerWidth;
 window.addEventListener("resize", () => {
   const nowWidth = window.innerWidth;
-  if ((beforeWidth < 786 && nowWidth >= 786) || (beforeWidth > 786 && nowWidth <= 786)) {
+  if ((beforeWidth < 768 && nowWidth >= 768) || (beforeWidth > 767 && nowWidth <= 767)) {
     location.reload();
+    beforeWidth = nowWidth;
+  } else {
+    beforeWidth = nowWidth;
   }
-  beforeWidth = nowWidth;
 });

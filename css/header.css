@@ -1,14 +1,9 @@
 @charset "utf-8";
-@font-face {
-  font-family: "locus_sangsang";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 
 html {
-  font-family: "locus_sangsang";
+  font-family: MICEGothic;
   font-size: 16px;
+  background-color: #181818;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -146,11 +141,23 @@ header {
   height: 100%;
 }
 
+#hamburger-click {
+  position: fixed;
+  cursor: pointer;
+
+  top: 0px;
+  right: 16px;
+  width: 24px;
+  height: 50px;
+  z-index: 11;
+}
+
 .menu {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   max-width: 0;
   transition: 0.5s ease;
   z-index: 1;
@@ -160,10 +167,13 @@ header {
 
 .hamburger-button {
   position: absolute;
-  bottom: 1rem;
+  top: calc(100vh - 1rem);
+  top: calc((var(--vh, 1vh) * 100) - 1rem);
+  padding-bottom: env(safe-area-inset-bottom);
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  transform: translateY(-100%);
 }
 
 .hamburger-play,

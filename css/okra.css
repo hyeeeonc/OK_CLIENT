@@ -1,0 +1,66 @@
+#okra {
+  font-family: "MICEGothic Bold";
+  padding: 3rem 2rem;
+  background-color: #181818;
+  height: calc(100vh - 85px - 260px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.okra-logo {
+  margin-top: 3rem;
+  font-size: 3rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.okra-logo-image {
+  margin-top: 3rem;
+  height: 50px;
+  filter: invert(100%);
+}
+
+.okra-download-container {
+  margin-right: 11rem;
+}
+
+.okra-download {
+  color: #cccccc;
+}
+
+@media (max-width: 767px) {
+  #okra {
+    height: calc(100vh - 50px - 200px);
+  }
+
+  .okra-download-container {
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .okra-download-container {
+    margin-right: 2rem;
+  }
+
+  .okra-download {
+    font-size: 0.7rem;
+  }
+
+  .okra-logo {
+    font-size: 1.9rem;
+    letter-spacing: -2px;
+  }
+
+  .okra-logo-image {
+    height: 30px;
+  }
+}
+
+@media (max-height: 833px) {
+  #okra {
+    height: 515px;
+  }
+}
