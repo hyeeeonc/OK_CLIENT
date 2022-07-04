@@ -9,10 +9,17 @@ const routeToPost = (postId) => {
 
 window.onload = async () => {
   const urlSearch = new URLSearchParams(location.search);
-  const section = urlSearch.get("section");
+  if (matchMedia("screen and (min-width: 768px)").matches) {
+    const section = urlSearch.get("section");
 
-  if (section) {
-    scrollToContact();
+    const scrollToContact = () => {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    };
+
+    if (section) {
+      scrollToContact();
+    }
+  } else {
   }
 
   const res = await fetch(`https://${domain}/api/v1/thumbnails`);

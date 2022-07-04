@@ -4,7 +4,14 @@ const mdText = document.getElementById("md-text");
 window.addEventListener("load", () => {
   setTimeout(() => {
     mdText.style.display = "block";
-    mdContent.style.width = "";
-    mdContent.style.maxWidth = "590.05px";
-  }, 1100);
+  }, 1600);
+});
+
+const mcContent = document.getElementById("mc-content");
+const mcText = document.getElementById("mc-text");
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    mcText.style.display = "block";
+  }, 1600);
 });

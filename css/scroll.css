@@ -76,6 +76,11 @@
   opacity: 50%;
 }
 
+.contact-mobile {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1320px) {
   .partnersA,
   .partnersB {
@@ -96,7 +101,7 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1.1rem;
+    margin-top: 3rem;
   }
 
   .md-mobile {
@@ -107,12 +112,9 @@
     max-width: 100px;
   }
 
-  .contact-mobile {
-    display: flex;
-    justify-content: center;
-  }
-
   .contact-mobile-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     width: 127px;
     height: 43px;
     border-radius: 12px;

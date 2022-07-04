@@ -59,7 +59,7 @@ if (matchMedia("screen and (max-width: 767px)").matches) {
         scrollHeight: 0,
         objs: {
           container: document.querySelector("#scroll-section-2"),
-          content: document.querySelector("#scroll-section-2 .contact"),
+          content: document.querySelector("#scroll-section-2 #contact1"),
         },
       },
     ];
@@ -81,7 +81,7 @@ if (matchMedia("screen and (max-width: 767px)").matches) {
         if (sceneInfo[i].type === "sticky" || sceneInfo[i].type === "video") {
           sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
         } else if (sceneInfo[i].type === "normal") {
-          sceneInfo[i].scrollHeight = sceneInfo[i].objs.content.offsetHeight + window.innerHeight * 1;
+          sceneInfo[i].scrollHeight = 1000;
         }
         sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
       }
@@ -331,8 +331,4 @@ if (matchMedia("screen and (max-width: 767px)").matches) {
 
     // setCanvasImages();
   })();
-
-  const scrollToContact = () => {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  };
 }
